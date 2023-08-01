@@ -16,7 +16,7 @@ public class Modulo09 {
 
         if (resultado >= 7){
             System.out.println(" Você esta aprovado! ");
-        } else if (resultado < 7 || resultado >= 5) {
+        } else if (resultado < 7 && resultado >= 5) {
             System.out.println(" Você esta em recuperação");
 
         }
