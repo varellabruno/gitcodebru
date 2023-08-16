@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class At1 {
+    public static void main(String[] args) {
+        System.out.println("exercicio modulo 11");
+        List<Cliente> nomes = new ArrayList<Cliente>();
+
+        Cliente gabriel = new Cliente("gabriel barbosa", 21,01);
+        Cliente bruno = new Cliente("Bruno varella", 23,02);
+        Cliente rafaela = new Cliente("rafaela fernandes", 22,03);
+
+        nomes.add(gabriel);
+        nomes.add(bruno);
+        nomes.add(rafaela);
+        System.out.println(nomes);
+        Collections.sort(nomes);
+        System.out.println(nomes);
+    }
+}
+
+
+==================================================//===========================================//===============================
+
+public class Cliente implements Comparable<Cliente> {
+
+    String nome;
+    int idade;
+    int codigo;
+
+    public Cliente (String nome, int idade, int codigo){
+        this.nome = nome;
+        this.idade = idade;
+        this.codigo = codigo;
+    }
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    @Override
+    public String toString() {
+        return this.nome;
+    }
+
+
+
+    public int compareTo(Cliente cliente) {
+        return this.nome.compareTo(cliente.getNome());
+    }
+}
